@@ -64,7 +64,7 @@ class PokemonAdmin(ImportExportModelAdmin):
     ordering = ('pokemon_id',)
 
     def get_image(self, instance: models.Pokemon) -> str:
-        return mark_safe(f'<img src="{settings.MEDIA_URL}{instance.image}" width="150" height="150" />')
+        return mark_safe(f'<img src="{settings.MEDIA_URL}{instance.image}" height="150" />')
 
     def get_types(self, instance: models.Pokemon) -> list[str]:
         return [t.name for t in instance.types.all()]

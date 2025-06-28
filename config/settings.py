@@ -41,6 +41,7 @@ CSRF_TRUSTED_ORIGINS = os.environ.get(
     'http://localhost:8000 http://127.0.0.1:8000'
 ).split(' ')
 
+X_FRAME_OPTIONS = "SAMEORIGIN"
 # Application definition
 
 INSTALLED_APPS = [
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     'apps.shared',
     'apps.authentication',
     'apps.core',
+    'apps.trainer',
 ]
 
 MIDDLEWARE = [

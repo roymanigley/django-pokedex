@@ -12,8 +12,11 @@
 4. initialize database:  
 `python management.py migrate`
 5. load the Pokédex data:  
-`python management.py shell < init\main.py # Windows`
-`python management.py shell < init/main.py # UNIX`
+`python management.py shell < init\01_init_pokemons.py # Windows`
+`python management.py shell < ./init/01_init_pokemons.py # UNIX`
+5. load the Trainer data:  
+`python management.py shell < init\02_init_trainers.py # Windows`
+`python management.py shell < init/02_init_trainers.py # UNIX`
 6. create a superuser for the admin portal:  
 `python management.py createsuperuser`
 
