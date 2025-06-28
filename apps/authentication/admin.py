@@ -12,7 +12,7 @@ class UserProfileAdmin(UserAdmin):
         'id', 'username', 'first_name', 'last_name', 'get_image',
         'is_active', 'is_superuser'
     )
-
+    list_per_page = 20
     fieldsets = (
         (None, {"fields": ("username", "password")}),
         (_("Personal info"), {

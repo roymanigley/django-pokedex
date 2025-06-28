@@ -9,8 +9,9 @@ from django.utils.translation import gettext_lazy as _
 @admin.register(models.TrainerPokemon)
 class TrainerPokemonAdminModel(ModelAdmin):
     list_display = (
-        'id', 'get_name', 'get_types', 'get_image_pokemon', 'get_image_trainer'
+        'id', 'get_name', 'level', 'get_types', 'get_image_pokemon', 'get_image_trainer'
     )
+    list_per_page = 20
     list_filter = (
         'trainer', 'pokemon', 'pokemon__types',
     )
@@ -42,6 +43,7 @@ class TrainerPokemonAdminModel(ModelAdmin):
 @admin.register(models.Trainer)
 class TrainerAdminModel(ModelAdmin):
     list_display = ('id', 'get_first_name', 'get_last_name', 'get_image')
+    list_per_page = 20
     search_fields = ('user_profile__first_name', 'user_profile__last_name')
 
     def get_image(self, instance: models.Trainer) -> str:
