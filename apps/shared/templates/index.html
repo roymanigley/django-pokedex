@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content%}
+<div class="card">
+  <div class="center card-content">
+    <span class="card-title grey-text text-darken-4">{% translate 'Welcome to the POKéDEX' %}</span>
+    <div class="center">
+      <img class="activator" height="400" src="{%static 'images/professor.png' %}">
+    </div>
+  </div>
+</div>
+{% endblock %}
