@@ -18,6 +18,7 @@ class PokemonType(models.Model):
     class Meta:
         verbose_name = _('Pokémon Type')
         verbose_name_plural = _('Pokémon Type')
+        ordering = ('name',)
 
 
 class Pokemon(models.Model):
@@ -56,3 +57,4 @@ class Pokemon(models.Model):
     class Meta:
         verbose_name = _('Pokémon')
         verbose_name_plural = _('Pokémon')
+        ordering = ('pokemon_id',)

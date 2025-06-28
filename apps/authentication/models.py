@@ -11,3 +11,4 @@ class UserProfile(AbstractUser):
     class Meta:
         verbose_name = _('User Profile')
         verbose_name_plural = _('User Profile')
+        ordering = ('first_name', 'last_name')
